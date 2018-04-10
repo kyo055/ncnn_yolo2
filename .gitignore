@@ -313,7 +313,7 @@ tensor_model/
 
 # cant't ignore the folder 3rd party
 !.gitignore
-!/3rdparty/opencv/Debug/bin/*.dll
+!/3rdparty/opencv/Debug/
 !/3rdparty/opencv/Debug/lib/
 !/3rdparty/opencv/Release/bin/*.dll
 !/3rdparty/opencv/Release/lib/
