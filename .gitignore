@@ -312,5 +312,5 @@ sortIndex/
 tensor_model/
 
 # cant't ignore the folder 3rd party
-!/3rdparty/
+!/3rdparty/*
 !/tiny-yolo-voc/tiny-yolo-voc.vcxproj
