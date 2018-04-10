@@ -312,5 +312,7 @@ sortIndex/
 tensor_model/
 
 # cant't ignore the folder 3rd party
-!/3rdparty/*
+!.gitignore
+!/3rdparty/opencv
+!/3rdparty/ncnn
 !/tiny-yolo-voc/tiny-yolo-voc.vcxproj
