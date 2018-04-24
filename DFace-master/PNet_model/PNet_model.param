@@ -1,0 +1,16 @@
+7767517
+14 15
+Input            data             0 1 data 0=3 1=112 2=96
+Convolution      ConvNd_1         1 1 data ConvNd_1 0=16 1=2 2=1 3=2 4=0 5=1 6=192
+PReLU            PReLU_1          1 1 ConvNd_1 PReLU_1 0=1
+Convolution      ConvNd_2         1 1 PReLU_1 ConvNd_2 0=32 1=3 2=1 3=1 4=0 5=1 6=4608
+PReLU            PReLU_2          1 1 ConvNd_2 PReLU_2 0=1
+Pooling          MaxPool2d_1      1 1 PReLU_2 MaxPool2d_1 0=0 1=2 2=2 3=0 4=0
+Convolution      ConvNd_3         1 1 MaxPool2d_1 ConvNd_3 0=32 1=3 2=1 3=1 4=0 5=1 6=9216
+PReLU            PReLU_3          1 1 ConvNd_3 PReLU_3 0=1
+Convolution      ConvNd_4         1 1 PReLU_3 ConvNd_4 0=32 1=3 2=1 3=1 4=0 5=1 6=9216
+PReLU            PReLU_4          1 1 ConvNd_4 PReLU_4 0=1
+Split            PReLU_4_copyer   1 2 PReLU_4 PReLU_4_ConvNd_5 PReLU_4_ConvNd_6
+Convolution      ConvNd_5         1 1 PReLU_4_ConvNd_5 ConvNd_5 0=1 1=1 2=1 3=1 4=0 5=1 6=32
+Sigmoid          Sigmoid_1        1 1 ConvNd_5 Sigmoid_1
+Convolution      ConvNd_6         1 1 PReLU_4_ConvNd_6 ConvNd_6 0=4 1=1 2=1 3=1 4=0 5=1 6=128
